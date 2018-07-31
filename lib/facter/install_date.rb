@@ -1,6 +1,6 @@
 require 'date'
 
-Facter.add('rhel_install_data') do
+Facter.add('rhel_install_date') do
   confine :osfamily => 'RedHat'
   setcode do
     pre_output = Facter::Core::Execution.execute('rpm -qi basesystem | grep Install')
